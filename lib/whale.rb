@@ -1,6 +1,6 @@
 class Whale
 
-  attr_accessor :calves, :lbs_of_milk
+  attr_accessor :calves, :lbs_of_milk, :lbs_of_krill
   attr_reader :name
   
   def initialize(name)
@@ -18,6 +18,10 @@ class Whale
     if self.lbs_of_milk > 50 && calf.hungry?
       self.lbs_of_milk -= 50
       calf.lbs_of_milk += 50
+    elsif calf.hungry?
+      "not enough milk"
+    else
+      "calf isn't hungry"
     end
   end
 
