@@ -2,7 +2,7 @@
 describe "Interactions" do
 
   context "Whale" do
-    
+
     let(:ellie) { Whale.new("Ellie") }
 
     describe "#give_birth" do
@@ -13,7 +13,7 @@ describe "Interactions" do
       end
 
       it "adds the new calf to the calves array" do
-        original_num_of_calves = ellie.calves.length        
+        original_num_of_calves = ellie.calves.length
         ellie.give_birth
         expect(ellie.calves.length).to eq(original_num_of_calves + 1)
         expect(ellie.calves.last.mother).to eq(ellie)
@@ -31,7 +31,7 @@ describe "Interactions" do
       end
 
       it "adds the calf to the calves array" do
-        original_num_of_calves = ellie.calves.length        
+        original_num_of_calves = ellie.calves.length
         ellie.adopt_calf(orphan)
         expect(ellie.calves.length).to eq(original_num_of_calves + 1)
         expect(ellie.calves.last).to eq(orphan)
@@ -53,7 +53,7 @@ describe "Interactions" do
         expect { ellie.feed_calf(calf) }.to_not raise_error
       end
 
-      it "feeds the calf if it's hungry and it has more than 50 lbs of milk" do
+      it "feeds the calf if the calf is hungry and it(self) has more than 50 lbs of milk" do
         calf.lbs_of_milk = 0
         ellie.lbs_of_milk = 75
         ellie.adopt_calf(calf)
@@ -71,7 +71,7 @@ describe "Interactions" do
         expect(calf.lbs_of_milk).to eq(120)
       end
 
-      it "doesn't feed calf if it doesn't have enough milk (50)  " do
+      it "doesn't feed calf if it(self) doesn't have enough milk (50)  " do
         calf.lbs_of_milk = 0
         ellie.lbs_of_milk = 5
         ellie.adopt_calf(calf)
@@ -88,7 +88,7 @@ describe "Interactions" do
 
     let(:mom) { Whale.new("Ellie") }
     let(:calf) { Calf.new(mom) }
-    
+
     describe "#drink_milk" do
 
       it "drinks if it's hungry and its mother has more than 50 lbs of milk" do
