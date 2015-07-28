@@ -1,8 +1,4 @@
----
-tags: todo, oo, object relations
-languages: ruby
-resources: 1
----
+
 
 # OO Whale Of A Time
 
