@@ -21,3 +21,4 @@ Make a whale class and a calf class. Run your testing suite to get started.
 ## Resources
 
 * [Describing class relationships in ruby](http://stackoverflow.com/a/2229123/2890716)
+<a href='https://learn.co/lessons/oo-whale-of-a-time' data-visibility='hidden'>View this lesson on Learn.co</a>
